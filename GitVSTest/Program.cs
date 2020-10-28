@@ -16,6 +16,8 @@ namespace GitVSTest
                 .Select(x => string.Concat(x.Where(y => Char.IsLetterOrDigit(y)))));
 
             Console.WriteLine(result);
+
+            Console.WriteLine("Sasai kudasai");
         }
     }
 }
