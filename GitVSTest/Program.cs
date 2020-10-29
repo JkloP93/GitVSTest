@@ -19,7 +19,7 @@ namespace GitVSTest
 
             Console.WriteLine("Sasai kudasai");
 
-            qwqwty
+            qwqasdfsdaf
 
             qwerty123
 
