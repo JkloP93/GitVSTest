@@ -45,11 +45,16 @@ namespace GitVSTest
         {
             result = new T[array.Length];
 
-            for (int i = 0; i < array.Rank; i++)
+            for (int i = 0; i <= array.Rank; i++)
             {
-                for (int j = 0; j < array.GetUpperBound(0); j++)
+                for (int j = 0; j <= array.GetUpperBound(0); j++)
                 {
-                    result[i * j] = array[i, j];
+                    if (i == 0)
+                    {
+                        result[j] = array[i, j];
+                    }
+                    else
+                        result[(array.GetUpperBound(0) + 1) * i + j] = array[i, j];
                 }
             }
         }
