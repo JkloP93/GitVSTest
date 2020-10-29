@@ -18,12 +18,58 @@ namespace GitVSTest
             Console.WriteLine(result);
 
             Console.WriteLine("Sasai kudasai");
+            var REBASE;
 
-            1q
+            int[] k = { 1, 5, 3, 6, 7, 4, 3, 9, 0 };
 
-            2w
+            OneDimArrtoTwo(3, 3, out int[,] twoK, k);
 
-            3e
+            foreach (int i in twoK)
+            {
+                Console.Write(", " + i);
+            }
+
+            Console.WriteLine();
+
+            TwoDimArrtoOne(twoK, out int[] oneK);
+
+            foreach (int i in oneK)
+            {
+                Console.Write(", " + i);
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void TwoDimArrtoOne<T>(T[,] array, out T[] result)
+        {
+            result = new T[array.Length];
+
+            for (int i = 0; i < array.Rank; i++)
+            {
+                for (int j = 0; j < array.GetUpperBound(0); j++)
+                {
+                    result[i * j] = array[i, j];
+                }
+            }
+        }
+
+        public static void OneDimArrtoTwo<T>(int rank, int dimLength, out T[,] result, params T[] array)
+        {
+            result = new T[rank, dimLength];
+
+            for (int i = 0; i < rank; i++)
+            {
+                for (int j = 0; j < dimLength; j++)
+                {
+                    if (i == 0)
+                    {
+                        result[i, j] = array[j];
+                    }
+                    else
+                        result[i, j] = array[dimLength * i + j];
+                }
+            }
         }
     }
 }
