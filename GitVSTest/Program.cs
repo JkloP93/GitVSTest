@@ -39,6 +39,10 @@ namespace GitVSTest
             }
 
             Console.WriteLine();
+
+            Console.WriteLine(RandomTwoDimArr(3, 3));
+
+            Console.WriteLine("kek");
         }
 
         public static void TwoDimArrtoOne<T>(T[,] array, out T[] result)
@@ -75,6 +79,27 @@ namespace GitVSTest
                         result[i, j] = array[dimLength * i + j];
                 }
             }
+        }
+
+        public static int RandomTwoDimArr(int rank, int dimLength)
+        {
+            Random rand = new Random();
+            int count = default(int);
+
+            int[,] arr = new int[rank, dimLength];
+
+            for (int i = 0; i < rank; i++)
+            {
+                for (int j = 0; j < dimLength; j++)
+                {
+                    int number = rand.Next(1, 99);
+                    arr[i, j] = number;
+                    if ((number & 1) == 0)
+                        count++;
+                }
+            }
+
+            return count;
         }
     }
 }
