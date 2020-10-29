@@ -18,6 +18,8 @@ namespace GitVSTest
             Console.WriteLine(result);
 
             Console.WriteLine("Sasai kudasai");
+
+            1
         }
     }
 }
