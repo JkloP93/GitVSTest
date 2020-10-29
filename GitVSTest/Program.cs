@@ -18,6 +18,12 @@ namespace GitVSTest
             Console.WriteLine(result);
 
             Console.WriteLine("Sasai kudasai");
+
+            qwerty
+
+            qwerty123
+
+            aaaa
         }
     }
 }
