@@ -19,11 +19,11 @@ namespace GitVSTest
 
             Console.WriteLine("Sasai kudasai");
 
-            1
+            1q
 
-            2
+            2w
 
-            3
+            3e
         }
     }
 }
