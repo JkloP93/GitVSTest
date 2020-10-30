@@ -41,8 +41,6 @@ namespace GitVSTest
 
             Console.WriteLine(RandomTwoDimArr(3, 3));
 
-            Console.WriteLine(NoNumerals("3 is a crowd"));
-
             Console.WriteLine("kek");
         }
 
@@ -102,15 +100,7 @@ namespace GitVSTest
 
             return count;
         }
-        
-        public static string NoNumerals(string input)
-        {
 
-            string[] numbers = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten" };
-
-            String result = String.Concat(input.Split(new char[] { ' ' }).Select(x => { if (Int32.TryParse(x, out int num) && num < 11) return numbers[num]; return x; }));
-
-            return result;
-        }
+        int smallfix;
     }
 }
